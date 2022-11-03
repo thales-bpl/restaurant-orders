@@ -6,7 +6,7 @@ class TrackOrders:
         return len(self._data)
 
     def add_new_order(self, customer, order, day):
-        self._data.append(customer, order, day)
+        self._data.append((customer, order, day))
 
     def get_most_ordered_dish_per_customer(self, customer):
         order_count_dict = {}
@@ -18,7 +18,7 @@ class TrackOrders:
                     order_count_dict[dish] = 1
                 else:
                     order_count_dict[dish] += 1
-            
+
                 if order_count_dict[dish] > order_count_dict[most_frequent]:
                     most_frequent = dish
 
@@ -58,7 +58,7 @@ class TrackOrders:
                 day_count_dict[day] = 1
             else:
                 day_count_dict[day] += 1
-        
+
             if day_count_dict[day] > day_count_dict[busiest_day]:
                 busiest_day = day
 
@@ -73,7 +73,7 @@ class TrackOrders:
                 day_count_dict[day] = 1
             else:
                 day_count_dict[day] += 1
-        
+
             if day_count_dict[day] < day_count_dict[least_busy_day]:
                 least_busy_day = day
 
@@ -85,5 +85,5 @@ class TrackOrders:
         for name, dish, _ in self._data:
             if name == customer and dish == order:
                 dish_count += 1
-        
+
         return dish_count
