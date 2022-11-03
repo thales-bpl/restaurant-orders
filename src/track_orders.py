@@ -37,13 +37,11 @@ class TrackOrders:
         return menu.difference(dishes_tried)
 
     def get_days_never_visited_per_customer(self, customer):
-        working_days_set = set(
-            ['segunda-feira', 'terça-feira', 'quarta-feira',
-                'quinta-feira', 'sexta-feira', 'sabado']
-            )
+        working_days_set = set()
         days_visited_set = set()
 
         for name, _, day in self._data:
+            working_days_set.add(day)
             if name == customer:
                 days_visited_set.add(day)
 
