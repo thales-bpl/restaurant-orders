@@ -16,5 +16,5 @@ def analyze_log(path_to_file):
     idx_3 = data_list.get_never_ordered_per_customer('joao')
     idx_4 = data_list.get_days_never_visited_per_customer('joao')
 
-    with open("data/mkt_campaing.txt", mode="w") as file:
+    with open("data/mkt_campaign.txt", mode="w") as file:
         file.write(f"{idx_1}\n{idx_2}\n{idx_3}\n{idx_4}")
