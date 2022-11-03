@@ -39,7 +39,7 @@ class TrackOrders:
     def get_days_never_visited_per_customer(self, customer):
         working_days_set = set(
             ['segunda-feira', 'terça-feira', 'quarta-feira',
-            'quinta-feira', 'sexta-feira', 'sabado']
+                'quinta-feira', 'sexta-feira', 'sabado']
             )
         days_visited_set = set()
 
