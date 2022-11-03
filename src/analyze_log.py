@@ -11,7 +11,16 @@ def burger_count_by_customer(customer, data):
 
 
 def never_ordered_by_customer(customer, data):
-    pass
+    menu = set(
+        ['pizza', 'hamburguer', 'coxinha', 'misto-quente']
+        )
+    dishes_tried = set()
+
+    for customer, dish, _ in data:
+        if customer == customer:
+            dishes_tried.add(dish)
+
+    return menu.difference(dishes_tried)
 
 
 def days_absent_by_customer(customer, data):
