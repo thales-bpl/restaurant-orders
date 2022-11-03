@@ -1,5 +1,5 @@
-from reader import reader
-from track_orders import TrackOrders
+from src.reader import reader
+from src.track_orders import TrackOrders
 
 
 def analyze_log(path_to_file):
